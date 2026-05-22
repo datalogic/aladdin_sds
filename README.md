@@ -12,7 +12,6 @@ The **Aladdin SDS (Silent Deploy Service)** is a service running on the **HOST**
 
 ---
 
-
 ## Supported Device
 
 <table>
