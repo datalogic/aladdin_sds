@@ -12,41 +12,88 @@ The **Aladdin SDS (Silent Deploy Service)** is a service running on the **HOST**
 
 ---
 
+
 ## Supported Device
 
-| Category | Product | Interface | Logs | Beep | Reset | Custom Config | FW Upgrade |
-|--------|---------|-----------|------|------|-------|---------------|------------|
-| Gryphon | Gryphon 46xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Gryphon 45xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Gryphon 42xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Gryphon 41xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Gryphon 44xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Gryphon 43xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Gryphon | Base Chargers | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan 25xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan 24xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan 22xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan 21xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan QW25 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan QW24 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | QuickScan QW21 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| QuickScan | Base Chargers | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 96x0 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 95x1 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 95x0 | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 91xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 93xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | PowerScan 71xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| PowerScan | Base Chargers | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 900i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 1500i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 3x10 / 3x50i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 36 / 3700i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 93 / 9400i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 9550i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 9800i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Magellan | Magellan 96 / 9900i | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
-| OEM Scan Engine | GFS45xx | USB-COM / USB-OEM | ✔ | ✔ | ✔ | ✔ | ✔ |
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Product</th>
+    <th>Interface</th>
+    <th>Logs</th>
+    <th>Beep</th>
+    <th>Reset</th>
+    <th>Custom Config</th>
+    <th>FW Upgrade</th>
+  </tr>
+
+  <!-- Gryphon -->
+  <tr>
+    <td rowspan="7">Gryphon</td>
+    <td>Gryphon 46xx</td>
+    <td>USB-COM / USB-OEM</td>
+    <td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+  </tr>
+  <tr><td>Gryphon 45xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Gryphon 42xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Gryphon 41xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Gryphon 44xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Gryphon 43xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Base Chargers</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+
+  <!-- QuickScan -->
+  <tr>
+    <td rowspan="8">QuickScan</td>
+    <td>QuickScan 25xx</td>
+    <td>USB-COM / USB-OEM</td>
+    <td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+  </tr>
+  <tr><td>QuickScan 24xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>QuickScan 22xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>QuickScan 21xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>QuickScan QW25</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>QuickScan QW24</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>QuickScan QW21</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Base Chargers</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+
+  <!-- PowerScan (no merge requested, keep normal) -->
+  <tr>
+    <td rowspan="7">PowerScan</td>
+    <td>PowerScan 96x0</td>
+    <td>USB-COM / USB-OEM</td>
+    <td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+  </tr>
+  <tr><td>PowerScan 95x1</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>PowerScan 95x0</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>PowerScan 91xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>PowerScan 93xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>PowerScan 71xx</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Base Chargers</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+
+  <!-- Magellan -->
+  <tr>
+    <td rowspan="8">Magellan</td>
+    <td>Magellan 900i</td>
+    <td>USB-COM / USB-OEM</td>
+    <td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+  </tr>
+  <tr><td>Magellan 1500i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 3x10/3x50i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 36/3700i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 93/9400i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 9550i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 9800i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Magellan 96/9900i</td><td>USB-COM / USB-OEM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+
+  <!-- OEM -->
+  <tr>
+    <td>OEM Scan Engine</td>
+    <td>GFS45xx</td>
+    <td>USB-COM / USB-OEM</td>
+    <td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td>
+  </tr>
+
+</table>
 
 ---
 
