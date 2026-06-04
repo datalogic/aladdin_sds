@@ -945,6 +945,13 @@ sendTelemetryMs = 3600000
 sendConnectionMin = 5
 logLevel = "INFO"
 
+[autoConfiguration]
+scheduleUpdateTime = "00:00 - 01:00"
+eventDrivenUpdateMode = "DEFER"
+retryTimes = 3
+retryDelay = 30
+removePackageAfterExecute = "DEPEND_ON_PACKAGE"
+
 [files]
 protocol = "http"
 port = 8090
@@ -961,9 +968,11 @@ port = 9000
 endpoint = "http://localhost:4317"
 serviceName = "SDS"
 
-[usbDeviceFilter]
-connectionFilter = "All"
-deviceFilter = "All"
+[connectivity]
+FRSConnectivity = "BOTH"
+HHSConnectivity = "BOTH"
+releaseHostFRS = false
+releaseHostHHS = false
 
 [updater]
 scheduleEnabled = false
@@ -973,6 +982,10 @@ manifestUrl = "https://aladdin.datalogic.com/sds/aladdin-sds-manifest.json"
 
 [notification]
 enableNotify = false
+
+[frsRecollector]
+retryNumber = 1
+periodMs = 30000
 ```
 
 ---
