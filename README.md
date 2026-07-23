@@ -412,7 +412,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 46xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -422,7 +422,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 45xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -432,7 +432,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 42xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -442,7 +442,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 41xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -452,7 +452,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 44xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -462,7 +462,7 @@ Gryphon
 </tr>
 <tr>
 <td>Gryphon 43xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -472,7 +472,7 @@ Gryphon
 </tr>
 <tr>
 <td>Base Chargers<br>WLC4090-BASE-WIRELESS-CHARGER<br>WLC4090-BT-BASE-WIRELESS-CHARGER<br>WLC4690-BASE-WIRELESS-CHARGER<br>WLC4690-BT-BASE-WIRELESS-CHARGER<br>…</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -497,7 +497,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan 25xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -507,7 +507,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan 24xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -517,7 +517,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan 22xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -527,7 +527,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan 21xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -537,7 +537,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan QW25</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -547,7 +547,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan QW24</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -557,7 +557,7 @@ QuickScan
 </tr>
 <tr>
 <td>QuickScan QW21</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -567,7 +567,7 @@ QuickScan
 </tr>
 <tr>
 <td>Base Chargers<br>BC2090-BASE-CHARGER<br>BC2090-BT-BASE-CHARGER<br>…</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -592,7 +592,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 96x0</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -602,7 +602,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 95x1 (Obsolete)</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -612,7 +612,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 95x0</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -622,7 +622,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 91xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -632,7 +632,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 93xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -642,7 +642,7 @@ PowerScan
 </tr>
 <tr>
 <td>PowerScan 71xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -652,7 +652,7 @@ PowerScan
 </tr>
 <tr>
 <td>Base Chargers <br>BC9600-BASE-CHARGER<br>BC9600-BT-BASE-CHARGER<br>…</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -677,7 +677,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 900i</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -687,7 +687,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 1500i (Only HOST cable)</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -697,7 +697,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 3x10/3x50i (Only HOST cable)</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -707,7 +707,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 36/3700i</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -717,7 +717,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 93/9400i (Only HOST cable)</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -727,7 +727,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 9550i</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -737,7 +737,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 9800i (Only HOST cable)</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -747,7 +747,7 @@ Magellan
 </tr>
 <tr>
 <td>Magellan 96/9900i</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -772,7 +772,7 @@ OEM Scan Engine
 </tr>
 <tr>
 <td>GFS45xx</td>
-<td>USB-COM</td>
+<td>USB-OEM</td>
 <td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
