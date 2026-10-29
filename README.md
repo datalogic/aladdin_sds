@@ -934,7 +934,29 @@ The following devices support the USB-COMPOSITE as same as USB-COM (Please note 
 
 ---
 
-## 3. Aladdin SDS Configuration
+## 3. Linux Installation Guide
+
+### 3.1. Ubuntu
+
+```
+# Make the installer executable by running the `chmod` command:
+chmod +x AladdinSDS_Bundle_Installer_<version>_Ubuntu.run
+# Start the installer with root privileges using `sudo`:
+sudo ./AladdinSDS_Bundle_Installer_<version>_Ubuntu.run
+```
+
+### 3.2. SUSE
+
+```
+# Make the installer executable by running the `chmod` command:
+chmod +x AladdinSDS_Bundle_Installer_<version>_SuSE.run
+# Start the installer with root privileges using `sudo`:
+sudo ./AladdinSDS_Bundle_Installer_<version>_SuSE.run
+```
+
+---
+
+## 4. Aladdin SDS Configuration
 
 ```toml
 # ============================================================================
@@ -942,7 +964,7 @@ The following devices support the USB-COMPOSITE as same as USB-COM (Please note 
 # ============================================================================
 # File Location:
 #   Windows: C:\ProgramData\Datalogic\AladdinSDS\config.toml
-#   Linux:   /usr/lib/AladdinSDS/config.toml
+#   Linux:   /opt/AladdinSDS/config.toml
 #
 # Format: TOML (Tom's Obvious, Minimal Language)
 #   - Strings must be in quotes: "value"
@@ -1006,6 +1028,11 @@ sendConnectionMin = 5
 #   Valid values: "TRACE", "DEBUG", "INFO", "WARN", "ERROR", "FATAL", "OFF"
 #   Default: "INFO"
 logLevel = "INFO"
+
+# locationId - Optional identifier for the physical or logical location of this service.
+#   Included in connection and diagnostic MQTT payloads when configured.
+#   Format: String / UUID (e.g. "00000000-0000-0000-0000-000000000000")
+locationId = ""
 
 # ----------------------------------------------------------------------------
 # [autoConfiguration] - Auto-Configuration Feature – Standalone Mode
@@ -1073,9 +1100,16 @@ downloadTimeoutMs = 3600000
 #   Where SDS packages are downloaded (restart required).
 #   Default: "download/"
 #   Important: Ensure this directory has write permissions
-#   Windows recommended: "C:\\ProgramData\\Datalogic\\AladdinSDS\\download"
-#   Linux recommended:   "/var/lib/AladdinSDS/download"
+#   Windows recommended: "C:\\Program Files\\Datalogic\\AladdinSDS\\download"
+#   Linux recommended:   "/opt/AladdinSDS/download"
 downloadPath = "download/"
+
+# removeDownloadedPackage - Delete the downloaded package after execution
+#   When true, the zip package downloaded from DL Connect (e.g. via Change Configuration)
+#   is automatically deleted from the download folder after the command completes.
+#   When false, the downloaded package is kept in the download folder.
+#   Default: false
+removeDownloadedPackage = false
 
 # ----------------------------------------------------------------------------
 # [mqtt] - MQTT Broker Connection Configuration
@@ -1184,6 +1218,13 @@ scheduleHour = 6
 #   Default: false
 triggerOnStart = false
 
+# allowDowngrade - Allow the updater to install an older version when requested
+#   When true, rollback/downgrade installs are permitted by the update service.
+#   When false, the updater refuses to install a version older than the current one.
+#   This setting is applied immediately without a service restart.
+#   Default: false
+allowDowngrade = false
+
 # manifestUrl - Update manifest URL
 #   URL of the JSON manifest file listing available service updates (restart required).
 #   The updater fetches this file to determine if new versions are available.
@@ -1206,7 +1247,7 @@ enableNotify = false
 # [frsRecollector] - FRS Children Recollector Configuration
 # ----------------------------------------------------------------------------
 # Controls how the AladdinLib re-polls child devices that are attached to an
-# FRS (Fixed Reader Station) host device.
+# FRS (Fixed Retail Scanner) host device.
 [frsRecollector]
 
 # retryNumber - Number of poll attempts for the FRS children recollector
@@ -1222,6 +1263,63 @@ retryNumber = 1
 #   Range: > 0
 periodMs = 30000
 
+# ----------------------------------------------------------------------------
+# [diagnostic] - Diagnostic Message Configuration
+# ----------------------------------------------------------------------------
+# Settings for diagnostic message handling and acknowledgements.
+[diagnostic]
+
+# enableDiagnosticACK - Enable diagnostic message acknowledgement tracking
+#   When true, diagnostic messages are tracked and retried if ACK is not received.
+#   When false, diagnostic messages are published without tracking or retries.
+#   Default: false
+enableDiagnosticACK = false
+
+# diagnosticACKTimeout - Timeout duration in seconds to wait for diagnostic ACK response
+#   How long SDS waits for an ACK from IoT Edge before retrying the message.
+#   Default: 60
+#   Range: >= 1
+diagnosticACKTimeout = 60
+
+# diagnosticACKMaxRetries - Maximum number of retry attempts for an unacknowledged diagnostic message
+#   When a diagnostic message does not receive an ACK within diagnosticACKTimeout, SDS retries
+#   by republishing with a new message ID. This setting limits how many times that retry occurs.
+#   Set to -1 for unlimited retries (retries until ACK is received).
+#   Set to 0 to disable retries (give up after first timeout, no retry).
+#   Default: 3
+#   Range: -1 = unlimited, 0 = no retries, >= 1 = limited retries
+diagnosticACKMaxRetries = 3
+
+# ----------------------------------------------------------------------------
+# [detection] - Device Detection Configuration
+# ----------------------------------------------------------------------------
+# Controls device detection and connection check retry behavior.
+[detection]
+
+# detectionRetryTimesShort - Number of retry attempts for short detection cycles
+#   How many times the detection logic retries a short detection cycle before giving up.
+#   Default: 3
+#   Range: >= 1
+detectionRetryTimesShort = 3
+
+# detectionRetryTimesLong - Number of retry attempts for long detection cycles
+#   How many times the detection logic retries a long detection cycle before giving up.
+#   Default: 3
+#   Range: >= 1
+detectionRetryTimesLong = 3
+
+# connectionCheckIntervalShort - Interval between short detection check attempts (milliseconds)
+#   How long the detection logic waits between consecutive short detection attempts.
+#   Default: 1000 (1 second)
+#   Range: > 0
+connectionCheckIntervalShort = 1000
+
+# connectionCheckIntervalLong - Interval between long detection check attempts (milliseconds)
+#   How long the detection logic waits between consecutive long detection attempts.
+#   Default: 60000 (60 seconds)
+#   Range: > 0
+connectionCheckIntervalLong = 60000
+
 # ============================================================================
 # End of Configuration
 # ============================================================================
@@ -1229,16 +1327,16 @@ periodMs = 30000
 
 ---
 
-## 4. HTTP Interface
+## 5. HTTP Interface
 
-### 4.1 Config
+### 5.1 Config
 Service configuration management endpoints.
 
 - GET `/config` → Get application configuration
 - PUT `/config` → Update application configuration
 - POST `/config/restore` → Restore default configuration
 
-### 4.2 Device
+### 5.2 Device
 Device management and command action endpoints.
 
 - GET `/devices` → List devices
@@ -1265,21 +1363,21 @@ Device management and command action endpoints.
 - PUT `/devices/{deviceId}/upload/` → Upload Config File
 - POST `/devices/command/firmware-upgrade` → Upgrade firmware
 
-### 4.3 Host
+### 5.3 Host
 Host management endpoints.
 
 - GET `/host/host-id` → Get host id
 - POST `/host/host-id` → Set host id
 - GET `/host/info` → Get info
 
-### 4.4 Packages
+### 5.4 Packages
 Local packages directory management endpoints.
 
 - GET `/packages` → List all packages
 - DELETE `/packages` → Delete all packages
 - POST `/packages` → Download a package
 
-### 4.5 Service
+### 5.5 Service
 Service control endpoints.
 
 - POST `/service/restart` → Restart the service
